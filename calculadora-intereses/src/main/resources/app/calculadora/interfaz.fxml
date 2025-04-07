@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml" 
+            fx:controller="app.calculadora.Controller"
+            fitToWidth="true"
+            hbarPolicy="NEVER"
+            style="-fx-background: #f5f9ff;"
+            stylesheets="@/app/calculadora/styles.css">
+    
+    <VBox spacing="15" 
+          alignment="CENTER" 
+          style="-fx-padding: 20;"
+          minWidth="500">
+        
+        <Label text="💰 CALCULADORA DE INTERÉS COMPUESTO" 
+               styleClass="title-label"/>
+        
+        <!-- Grupo: Capital Inicial -->
+        <VBox spacing="5" styleClass="input-group">
+            <Label text="Capital Inicial (€):" styleClass="input-label"/>
+            <TextField fx:id="txtCapital" promptText="Ej: 10000">
+                <tooltip>
+                    <Tooltip text="Cantidad inicial de dinero a invertir"/>
+                </tooltip>
+            </TextField>
+        </VBox>
+        
+        <!-- Grupo: Aportaciones Periódicas -->
+        <VBox spacing="10" styleClass="input-group">
+            <CheckBox fx:id="chkAportaciones" text="Realizar aportaciones periódicas"
+                      styleClass="checkbox-bold"/>
+            
+            <VBox fx:id="containerAportaciones" visible="false" spacing="5">
+                <HBox spacing="15" alignment="CENTER_LEFT">
+                    <VBox spacing="5">
+                        <Label text="Monto de aportación (€):" styleClass="input-label"/>
+                        <TextField fx:id="txtAportacion" promptText="Ej: 100"/>
+                    </VBox>
+                    
+                    <VBox spacing="5">
+                        <Label text="Frecuencia:" styleClass="input-label"/>
+                        <ComboBox fx:id="cbFrecuencia" prefWidth="120"/>
+                    </VBox>
+                </HBox>
+                
+                <Label text="Ej: Aportar 100€ cada mes" styleClass="hint-text"/>
+            </VBox>
+        </VBox>
+        
+        <!-- Grupo: Tasa de Interés -->
+        <VBox spacing="5" styleClass="input-group">
+            <Label text="Tasa de interés anual (%):" styleClass="input-label"/>
+            <TextField fx:id="txtInteres" promptText="Ej: 5 (para 5%)"/>
+        </VBox>
+        
+        <!-- Grupo: Tiempo -->
+        <VBox spacing="5" styleClass="input-group">
+            <Label text="Años de inversión:" styleClass="input-label"/>
+            <TextField fx:id="txtTiempo" promptText="Ej: 10"/>
+        </VBox>
+        
+        <!-- Grupo: Inflación estimada -->
+        <VBox spacing="5" styleClass="input-group">
+            <Label text="Inflación anual estimada (%):" styleClass="input-label"/>
+            <ComboBox fx:id="cbInflacion" prefWidth="150"/>
+            <Label text="Ej: 2% es una media a largo plazo" styleClass="hint-text"/>
+        </VBox>
+
+        <!-- Botón de cálculo -->
+        <Button text="CALCULAR" 
+                onAction="#calcularInteres" 
+                styleClass="calculate-button"/>
+        
+        <!-- Resultado -->
+        <Label fx:id="lblResultado" 
+               styleClass="result-label"
+               wrapText="true"
+               maxWidth="400"
+               visible="false"/>
+    </VBox>
+</ScrollPane>

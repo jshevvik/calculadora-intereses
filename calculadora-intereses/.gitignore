@@ -1,0 +1,17 @@
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# Maven
+target/
+*.jar
+*.war
+*.ear
+
+# Archivos temporales
+*.log
+*.tmp
+*.bak
+
