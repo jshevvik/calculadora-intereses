@@ -7,10 +7,6 @@
 
 Aplicación JavaFX para calcular el crecimiento de inversiones con interés compuesto, incluyendo aportaciones periódicas y ajuste por inflación.
 
-![image](https://github.com/user-attachments/assets/d2cc119b-dfdc-4e09-8b82-2ef8a2c799ec)
-![image](https://github.com/user-attachments/assets/63fd5462-7603-44bd-b82c-d6a752f5ae45)
-
-
 
 ## ✨ Características
 
