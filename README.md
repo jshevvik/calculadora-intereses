@@ -25,7 +25,7 @@ Aplicación JavaFX para calcular el crecimiento de inversiones con interés comp
 ### Pasos
 ```bash
 # Clonar el repositorio
-git clone https://github.com/tu-usuario/calculadora-intereses.git
+git clone https://github.com/jshevvik/calculadora-intereses.git
 
 # Navegar al proyecto
 cd calculadora-intereses
