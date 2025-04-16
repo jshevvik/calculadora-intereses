@@ -8,11 +8,11 @@
             fx:controller="app.calculadora.Controller"
             fitToWidth="true"
             hbarPolicy="NEVER"
-            style="-fx-background: #c4c776;"
             stylesheets="@/app/calculadora/styles.css">
     
     <VBox spacing="15" 
           alignment="CENTER" 
+          styleClass="main-container"
           style="-fx-padding: 20;"
           minWidth="500">
         
