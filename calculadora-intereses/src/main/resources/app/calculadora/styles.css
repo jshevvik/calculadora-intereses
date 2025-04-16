@@ -1,6 +1,6 @@
 /* Estilos generales */
 .root {
-    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+    -fx-font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
 /* ScrollPane */
@@ -9,21 +9,21 @@
 }
 
 .scroll-pane .viewport {
-    -fx-background-color: #f5f9ff;
+    -fx-background-color: #faf6d0;
 }
 
 .scroll-bar:vertical {
-    -fx-background-color: transparent;
+    -fx-background-color: #909a92;
 }
 
 .scroll-bar:vertical .track {
-    -fx-background-color: #e0e0e0;
+    -fx-background-color: rgb(255, 255, 255);
     -fx-border-color: transparent;
     -fx-background-radius: 2em;
 }
 
 .scroll-bar:vertical .thumb {
-    -fx-background-color: #a0a0a0;
+    -fx-background-color: #909a92;
     -fx-background-radius: 2em;
 }
 
@@ -38,7 +38,7 @@
 /* Grupos de entrada */
 .input-group {
     -fx-padding: 10px;
-    -fx-background-color: #ffffff;
+    -fx-background-color: #c7d8ab;
     -fx-background-radius: 5px;
     -fx-border-radius: 5px;
     -fx-border-color: #e0e0e0;
@@ -61,7 +61,7 @@
     -fx-border-color: #d5d5d5;
     -fx-border-radius: 3px;
     -fx-border-width: 1px;
-    -fx-prompt-text-fill: #95a5a6;
+    -fx-prompt-text-fill: #909a92;
 }
 
 .text-field:focused, .combo-box:focused {
@@ -77,7 +77,7 @@
 
 /* Botón de cálculo */
 .calculate-button {
-    -fx-background-color: #3498db;
+    -fx-background-color: #909a92;
     -fx-text-fill: white;
     -fx-font-weight: bold;
     -fx-font-size: 16px;
@@ -89,7 +89,8 @@
 }
 
 .calculate-button:hover {
-    -fx-background-color: #2980b9;
+    -fx-background-color: #c7d8ab;
+    -fx-text-fill: black;
 }
 
 /* Resultado */
@@ -108,7 +109,7 @@
 }
 
 .error {
-    -fx-text-fill: #e74c3c;
+    -fx-text-fill: black;
 }
 
 /* Textos informativos */
@@ -125,4 +126,8 @@
     -fx-text-fill: white;
     -fx-padding: 5px 8px;
     -fx-background-radius: 3px;
+}
+
+.main-container {
+    -fx-background-color: #c4c776;
 }

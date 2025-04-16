@@ -8,7 +8,7 @@
             fx:controller="app.calculadora.Controller"
             fitToWidth="true"
             hbarPolicy="NEVER"
-            style="-fx-background: #f5f9ff;"
+            style="-fx-background: #c4c776;"
             stylesheets="@/app/calculadora/styles.css">
     
     <VBox spacing="15" 
@@ -34,7 +34,7 @@
             <CheckBox fx:id="chkAportaciones" text="Realizar aportaciones periódicas"
                       styleClass="checkbox-bold"/>
             
-            <VBox fx:id="containerAportaciones" visible="false" spacing="5">
+            <VBox fx:id="containerAportaciones" visible="false" spacing="5" managed="false">
                 <HBox spacing="15" alignment="CENTER_LEFT">
                     <VBox spacing="5">
                         <Label text="Monto de aportación (€):" styleClass="input-label"/>

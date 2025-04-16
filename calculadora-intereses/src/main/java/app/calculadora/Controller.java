@@ -41,6 +41,11 @@ public class Controller {
         configurarFrecuencias();
         configurarListeners();
         configurarInflacion();
+        
+        chkAportaciones.selectedProperty().addListener((obs, wasSelected, isNowSelected) -> {
+            containerAportaciones.setVisible(isNowSelected);
+            containerAportaciones.setManaged(isNowSelected);
+        });
 
     }
 
@@ -193,24 +198,31 @@ public class Controller {
     private void mostrarResultado(double resultado, double capitalInicial, double tasa, int años, String detalle, double resultadoReal, double totalAportado) {
     	
     	double inversionTotal = capitalInicial + totalAportado;
-        double gananciaPura = resultado - capitalInicial;
-        
-        String mensaje = String.format(
-            "💰 Resultado después de %d años al %.2f%% anual:\n\n" +
-            "➤ Capital Inicial: %s€\n" +
-            		(totalAportado > 0 ? "➤ Aportaciones Totales: %s€\n" : "") +
-            "➤ Capital Final: %s€\n" +
-            "➤ Ganancia: %s€\n" +
-            "➤ Capital Ajustado por inflación: %s€\n\n" +
-            "➤ Detalle: %s",
-            años, tasa,
-            df.format(capitalInicial),
-            totalAportado > 0 ? df.format(totalAportado) : "",
-            df.format(resultado),
-            df.format(gananciaPura),
-            df.format(resultadoReal),
-            detalle
-        );
+    	double gananciaPura = resultado - capitalInicial;
+    	double gananciaReal = resultado - inversionTotal;
+    	double gananciaRealAjustada = resultadoReal - inversionTotal;
+
+    	String mensaje = String.format(
+    	    "💰 Resultado después de %d años al %.2f%% anual:\n\n" +
+    	    "➤ Capital Inicial: %s€\n" +
+    	        (totalAportado > 0 ? "➤ Aportaciones Totales: %s€\n" : "") +
+    	    "➤ Capital Final: %s€\n" +
+    	    "➤ Ganancia (sin contar aportaciones): %s€\n" +
+    	    "➤ Ganancia Real (neto total invertido): %s€\n" +
+    	    "➤ Capital Ajustado por inflación: %s€\n" +
+    	    "➤ Ganancia Real Ajustada por inflación: %s€\n\n" +
+    	    "➤ Detalle: %s",
+    	    años, tasa,
+    	    df.format(capitalInicial),
+    	    totalAportado > 0 ? df.format(totalAportado) : "",
+    	    df.format(resultado),
+    	    df.format(gananciaPura),
+    	    df.format(gananciaReal),
+    	    df.format(resultadoReal),
+    	    df.format(gananciaRealAjustada),
+    	    detalle
+    	);
+
 
         lblResultado.setText(mensaje);
         lblResultado.getStyleClass().removeAll("error");
