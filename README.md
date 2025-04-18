@@ -33,7 +33,7 @@ _Puedes añadir aquí una imagen de la interfaz si lo deseas._
 
 4. Ejecuta la clase principal del proyecto.
 
-⚠️ Nota: Si usas JavaFX por primera vez, asegúrate de configurar correctamente las librerías en tu IDE.
+*⚠️ Nota: Si usas JavaFX por primera vez, asegúrate de configurar correctamente las librerías en tu IDE.*
 
 ## 🛠️ Tecnologías utilizadas
 - Java
