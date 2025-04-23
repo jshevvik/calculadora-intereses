@@ -18,8 +18,9 @@ Esta es una aplicación Java con interfaz gráfica (JavaFX) que permite calcular
 
 ## 🖼️ Capturas de pantalla
 
-<img src="https://github.com/user-attachments/assets/ca1dd172-2032-47a5-a96e-727de9896c8c" width="500" alt="Captura 1">
-<img src="https://github.com/user-attachments/assets/b9d83f86-651f-4d6f-bb71-f4f02e574279" width="500" alt="Captura 2">
+<img src="https://github.com/user-attachments/assets/ca1dd172-2032-47a5-a96e-727de9896c8c" width="400" alt="Captura 1">
+
+<img src="https://github.com/user-attachments/assets/b9d83f86-651f-4d6f-bb71-f4f02e574279" width="400" alt="Captura 2">
 
 
 
